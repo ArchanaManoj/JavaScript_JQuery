@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript Exercises II</title>
+<link rel="stylesheet" href="style/style.css">
+<script type="text/javascript" src="jquery-1.11.1.js"></script>
+<script type="text/javascript">
+$("document").ready(function(){
+	$("#sub").on("click",function(){
+
+	var fname = document.getElementById("fn").value;
+	var lname = document.getElementById("ln").value;
+	var email = document.getElementById("em").value;
+	var chck = /@/;
+	if((fname!="")&&(lname!="")&&(email!="")){
+		if(chck.test(email)== true){
+			$("#print").text(fname+","+lname+","+email);
+		}
+		else{
+			$("#print").text("Please enter valid email");
+		}	
+	}
+	else{
+		$("#print").text("Please type in something");
+	}
+	})
+	$("#main1").on("mouseenter",function(){
+		$("#submenu1").slideToggle(1000);
+	})
+	$("#main2").on("mouseenter",function(){
+		$("#submenu2").slideToggle(1000);
+	})
+	$("#main3").on("mouseenter",function(){
+		$("#submenu3").slideToggle(1000);
+	})
+	
+})
+</script>
+<link rel="stylesheet" type="text/css" href="js_style.css">
+<style type= text/css>
+#main,#main2,#main3{
+	display: inline;
+	text-align: center;
+	margin-left: 10px;
+	margin-right: 10px;
+	font-weight: bold;
+	font-variant: small-caps;
+}
+li a{
+	text-decoration: none;
+}
+#submenu1,#submenu2,#submenu3{
+	display: none;
+	text-align:center;
+}
+ul {	
+	padding: 10px 10px;
+	text-align: center;
+	float: left;
+	display: inline-block;
+	list-style: none;
+}
+ul li{
+	display: inline;
+	width:150px;
+	height:30px;
+	line-height: 30px;
+	float:left;
+	text-align: center;
+	font-variant: small-caps;
+
+}
+#frm{
+	padding-top: 10px;
+	padding-left: 5px;
+	padding-right: 5px;
+	float:right;
+}
+	
+</style>
+</head>
+<body>
+
+	
+		<nav>
+		<ul>
+			<li id="main1"><a href = "search.html">Search</a>
+				<ul id="submenu1">
+				<li>Item1</li>
+				<li>Item2</li>
+			</ul>
+			</li>
+
+			<li id="main2"><a href ="Help.html">Help</a>
+				<ul id="submenu2">
+				<li>Item3</li>
+				<li>Item4</li>
+			</ul>
+			</li>
+
+			<li id="main3"><a href ="Gallery.html">Gallery</a>
+				<ul id="submenu3">
+				<li>Item1</li>
+				<li>Item2</li>
+			</ul>
+			</li>
+		</ul>
+		</nav><br><br><br>
+			<div id="frm">
+		
+			First Name: <input type="text" val="" id ="fn"><br><br>
+			Last Name:  <input type="text" val="" id="ln"><br><br>
+			Email:      <input type="text" val="" id="em"><br><br>
+
+			<button id="sub">Submit</button>
+		
+			</div>
+			<div>
+					<p id="print"></p>
+			</div>
+</body>
+</html>

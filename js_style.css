@@ -1,0 +1,42 @@
+@ charset ="UT-8"
+body{
+	display: block;
+}
+
+#box1{
+	color:blue;
+	float:right;
+	border:solid black 1px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-right: 5px;
+	padding-left: 10px;
+	font-size: 150%;
+}
+#box2{
+	background-color: #d1e0e0;
+	text-align: center;
+	font-size: 250%;
+	letter-spacing: 10px;
+
+}
+#box3{
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-variant: small-caps;
+}
+#cmas{
+	
+	background-color: #33cc33;
+	border:solid red 1px;
+	
+}
+#temp{
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-right: 15px;
+	padding-left: 15px;
+	display:block;
+	float:left;
+	border:solid black 1px;
+}

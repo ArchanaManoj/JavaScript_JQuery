@@ -1,0 +1,99 @@
+var word = window.prompt("Type in a word");
+
+function codify(word){
+  
+    word = word.replace(/a/,'@');
+    word = word.replace(/e/,'3');
+    word = word.replace(/i/,'k');
+    word = word.replace(/o/,'0');
+    word = word.replace(/p/,'b');
+    word = word.replace(/m/,'n');
+    word = word.replace(/s/,'5');
+    word = word.replace(/t/,'7');
+    word = word.replace(/n/,'z');
+    word = word.replace(/r/,'6');
+    word = word.replace(/ /,'g');
+    word = word.replace(/d/,'p');
+  
+  return word;
+}
+codify(word);
+
+
+_________________________________________________________
+
+***checking palindrome***
+
+function palindrome(word){
+  
+  for(var i=0;i<=Math.round((word.length)/2);i++){
+    
+    if(word[i]!=word[word.length-i-1]){
+       var status = false;
+    }
+    else{
+      var status = true;
+    }
+  }
+  
+  if(status==true){
+    console.log("Palindrome");
+  }
+  else{
+    console.log("Not palindrome");
+  }
+}
+
+palindrome("madam");
+************************************************************************
+
+function alphabet(word){
+  
+  console.log(word.split('').sort().join(''));
+  
+}
+
+alphabet("jshdkja");
+
+**********************************************************************
+function longest(phrase){
+  var word = phrase.split(" ");
+  
+  
+  for(var i=0;i<word.length;i++){
+    
+    if(word[i].length > word[i++].length){
+      var big = word[i];
+    }
+    else{
+      var big = word[i++];
+    }
+  }
+    
+  console.log("Longest word is:" +big);
+}
+
+longest("This is a big sentence");
+
+*******************************************************************
+function identity(limit){
+  for(var i =0;i<limit;i++){
+    for(var j=0;j< limit;j++){
+      if(i==j){
+        console.log(1);
+      }
+      else{
+        console.log(0);
+      }
+      console.log("\n");
+    }
+  }
+}
+
+identity(3);
+
+**********************************************************
+
+
+
+    
